@@ -1,0 +1,11 @@
+# This mod's own build output.
+Plugin/bin~/
+Plugin/obj~/
+dist~/
+
+# Unity writes .meta files for Plugin/ because the folder shows in the Project window,
+# but it never compiles the code there - the asmdef's define constraint sees to that -
+# and nothing in the project references it, so the GUIDs are noise in every diff.
+Plugin.meta
+Plugin/*.meta
+Plugin/**/*.meta

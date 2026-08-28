@@ -1,0 +1,16 @@
+{
+    "name": "FastForwardPlus.Plugin",
+    "rootNamespace": "FastForwardPlus",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [
+        "MODKIT_NEVER_COMPILE"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
