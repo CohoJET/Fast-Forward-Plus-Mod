@@ -7,7 +7,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <AssemblyName>FastForwardPlus</AssemblyName>
     <RootNamespace>FastForwardPlus</RootNamespace>
-    <Version>1.0.0</Version>
+    <Version>1.1.0</Version>
     <Authors>CohoJET</Authors>
     <Description>Sets the simulation speed to any of a configurable list of multipliers with a hotkey.</Description>
     <LangVersion>latest</LangVersion>

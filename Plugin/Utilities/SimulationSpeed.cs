@@ -22,7 +22,7 @@ namespace FastForwardPlus.Utilities
             try
             {
                 var world = World.DefaultGameObjectInjectionWorld;
-                return world != null && Utility.HasSingleton<Core.Singleton_23>(world.EntityManager);
+                return world != null && Utility.HasSingleton<Core.Singleton>(world.EntityManager);
             }
             catch (Exception)
             {
@@ -37,7 +37,7 @@ namespace FastForwardPlus.Utilities
         {
             try
             {
-                return Utility.GetSingleton<Core.Singleton_23>(Entities)._simulationSpeed;
+                return Utility.GetSingleton<Core.Singleton>(Entities)._simulationSpeed;
             }
             catch (Exception ex)
             {
@@ -53,7 +53,7 @@ namespace FastForwardPlus.Utilities
         {
             try
             {
-                return Utility.GetSingleton<Core.Singleton_23>(Entities)._worldSettingsRO._enabledFastForward;
+                return Utility.GetSingleton<Core.Singleton>(Entities)._worldSettingsRO._enabledFastForward;
             }
             catch (Exception ex)
             {
@@ -74,8 +74,8 @@ namespace FastForwardPlus.Utilities
             // Read-modify-write through SetComponentData rather than RefRW.ValueRW: the interop
             // wrapper hands back a copy of the struct, so assigning into it writes to a temporary and
             // the singleton never changes.
-            var coreEntity = Utility.GetSingletonEntity<Core.Singleton_23>(em);
-            var core = em.GetComponentData<Core.Singleton_23>(coreEntity);
+            var coreEntity = Utility.GetSingletonEntity<Core.Singleton>(em);
+            var core = em.GetComponentData<Core.Singleton>(coreEntity);
             core._simulationSpeed = speed;
             em.SetComponentData(coreEntity, core);
 
@@ -102,7 +102,7 @@ namespace FastForwardPlus.Utilities
         {
             try
             {
-                var netcore = Utility.GetSingleton<Netcore.Singleton_19>(em);
+                var netcore = Utility.GetSingleton<Netcore.Singleton>(em);
                 var universe = Utility.GetSingleton<UniverseCoreSingleton>(em);
 
                 var sync = new NetcoreEvent_SyncFullNetcoreClock
